@@ -9,7 +9,7 @@ module.exports = (robot) ->
     robot.http("http://uryfs1.york.ac.uk:7070/json2.xsl")
       .get() (err, res, body) ->
         data = JSON.parse(body)
-        msg.send "Now playing: #{data.mounts[2].title}"
+        msg.send "Now playing: #{data.mounts["/live-high"].title}"
 
   robot.respond /listeners/i, (msg) ->
     robot.http("http://uryfs1.york.ac.uk:7070/json2.xsl")
