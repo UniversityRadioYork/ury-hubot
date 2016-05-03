@@ -10,7 +10,6 @@
   "hubot-reaction",
   "hubot-redis-brain",
   "hubot-shipit",
-  "hubot-slack-blacklist-middleware",
   "hubot-slack-vote",
   "hubot-youtube"
 ]

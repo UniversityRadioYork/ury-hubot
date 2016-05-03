@@ -19,7 +19,6 @@
     "hubot-scripts": "^2.16.1",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.3.0",
-    "hubot-slack-blacklist-middleware": "^1.0.2",
     "hubot-slack-vote": "0.0.5",
     "hubot-youtube": "^1.0.2"
   },
