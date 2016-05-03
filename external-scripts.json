@@ -1,12 +1,16 @@
 [
-  "hubot-diagnostics",
-  "hubot-help",
+  "hubot-business-cat",
+  "hubot-darts",
+  "hubot-diagnostics"
   "hubot-google-images",
   "hubot-google-translate",
-  "hubot-pugme",
-  "hubot-maps",
+  "hubot-help",
+  "hubot-maps"
+  "hubot-mimic",
+  "hubot-reaction"
   "hubot-redis-brain",
-  "hubot-rules",
   "hubot-shipit",
-  "hubot-business-cat"
+  "hubot-slack-blacklist-middleware",
+  "hubot-slack-vote",
+  "hubot-youtube"
 ]
