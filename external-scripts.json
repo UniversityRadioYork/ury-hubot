@@ -11,5 +11,6 @@
   "hubot-redis-brain",
   "hubot-shipit",
   "hubot-slack-vote",
-  "hubot-youtube"
+  "hubot-youtube",
+  "hubot-issue-tracker"
 ]
