@@ -12,7 +12,7 @@
     "hubot-google-images": "^0.1.5",
     "hubot-google-translate": "^0.2.0",
     "hubot-help": "^0.1.1",
-    "hubot-issue-tracker": "git+https://github.com/UniversityRadioYork/hubot-issue-tracker.git#v0.1.0",
+    "hubot-issue-tracker": "git+https://github.com/UniversityRadioYork/hubot-issue-tracker.git",
     "hubot-maps": "0.0.2",
     "hubot-mimic": "^0.1.2",
     "hubot-reaction": "0.0.6",
