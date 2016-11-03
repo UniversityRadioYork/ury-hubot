@@ -7,14 +7,29 @@
 module.exports = (robot) ->
   robot.respond /now playing\s?(.*)/i, (msg) ->
     console.log(msg.match)
-    robot.http("http://uryfs1.york.ac.uk:7070/json2.xsl")
+    robot.http("https://ury.org.uk/audio/status-json.xsl")
       .get() (err, res, body) ->
         data = JSON.parse(body)
         mount = "/" + ( if msg.match[1]? and (msg.match[1] != '') then msg.match[1].trim() else "live-high" )
-        msg.send "Now playing: #{data.mounts[mount].title}"
+        msg.send "Now playing: #{getNowPlaying(data, mount)}"
 
   robot.respond /listeners/i, (msg) ->
-    robot.http("http://uryfs1.york.ac.uk:7070/json2.xsl")
+    robot.http("https://ury.org.uk/audio/status-json.xsl")
       .get() (err, res, body) ->
         data = JSON.parse(body)
-        msg.send "Live listeners: #{data.total_listeners}"
+        listeners = 0
+        for source in data.icestats.source
+          listeners += source.listeners
+        msg.send "Live listeners: #{listeners}"
+
+getNowPlaying = (data, mount) ->
+  nowplaying = ""
+  for source in data.icestats.source
+    if endsWith(source.listenurl, mount)
+      nowplaying = if source.title? then source.title else ""
+      nowplaying += if source.artist? then " - #{source.artist}" else ""
+      break
+  nowplaying
+
+endsWith = (string, substring) ->
+  substring == '' or string.slice(-substring.length) == substring
